@@ -1,7 +1,7 @@
 name = "QSymDecomposition"
 uuid = "1feb03ff-97fb-46a7-83fc-ac60f57ccc47"
 version = "0.1.0"
-authors = ["beche "]
+authors = ["Matteo Bechere <matteo.bechere@uni-konstanz.de>"]
 
 [deps]
 AlgebraicSolvers = "36cc366f-6373-477c-92c8-0345b2862178"
