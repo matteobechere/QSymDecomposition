@@ -24,4 +24,4 @@ p = (4*X[1] - 2*X[2] + 2*X[3] + X[4] - X[5] + X[6])^4 -
     (X[1] - 2*X[2] - X[3] + 4*X[4] + 2*X[5] + X[6])^4 +
     (4*X[1] + 2*X[2] + 2*X[3] + X[4] + X[5] + X[6])^4
 
-result = qsym_decompose(p, q, 2)
+result = qsym_decompose(p, q, 4)
