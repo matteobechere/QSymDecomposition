@@ -4,7 +4,8 @@ The package QSymDecomposition provides tools to perform $q$-Symmetric decomposit
 
 ## Installation
 
-To install the package, in Julia, enter the package manager by pressing `]` and then type `add QSymDecomposition`.
+To install the package, in Julia, enter the package manager by pressing `]` and then type
+`pkg> add https://github.com/matteobechere/QSymDecomposition`.
 
 ## Example usage, within Julia
 
