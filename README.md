@@ -40,3 +40,12 @@ p = (X[1] + X[2] + X[3] + X[4] + X[5] + X[6] + X[7] + X[8] + X[9])^3 +
 result = qsym_decompose(p, q, 3)
 ```
 
+A $q$-Symmetric decomposition looks like $p_{\text{dec}}=\sum_{i=1}^r\omega_i(q_0(\xi_i)X_0+\cdots+q_n(\xi_i)X_n)^k$.
+
+The function `qsym_decompose` outputs a Dict called `result`, containing
+- `psi_polynomial` is the image of $p$ under the $\psi_q$ map;
+- `weights` is a tuple containing the scalars $\omega_1,\ldots,\omega_r$;
+- `points` is a matrix whose columns are the tuples $\xi_1,\ldots,\xi_r$;
+- `qSympoints` is a matrix whose i-th column is the tuples $q_0(\xi_i),\ldots,q_n(\xi_i)$;
+- `p_decomposition` is the expanded $p_{\text{dec}}$, i.e. $q$-Symmetric decomposition of $p$;
+- `residual` is the (apolar) norm of the difference $p-p_{\text{dec}}$. A small `residual` ensures the decomposition was successful.
