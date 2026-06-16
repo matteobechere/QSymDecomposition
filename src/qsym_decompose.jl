@@ -82,14 +82,14 @@ function qsym_decompose(p, q::AbstractVector, k::Int; Z_vars = unique(reduce(vca
     end
 
     # reconstruct psi(p)
-    poly_x = zero(sum(Z_vars))
+    poly_z = zero(sum(Z_vars))
     for i in eachindex(x)
         if abs(x[i]) > tol # eliminates terms which are close to zero
-            poly_x += x[i] * Bcod[i]
+            poly_z += x[i] * Bcod[i]
         end
     end
 
-    wPsi, XiPsi = decompose(poly_x) # Waring decomposition of psi(p)
+    wPsi, XiPsi = decompose(poly_z) # Waring decomposition of psi(p)
     n_points = size(XiPsi, 2)
     n_q = length(q)
 
@@ -103,7 +103,7 @@ function qsym_decompose(p, q::AbstractVector, k::Int; Z_vars = unique(reduce(vca
         end
     end
 
-    # now reconstruct in X variables
+    # now reconstruct the q-Sym decomposition in X variables
     p_dec = build_polynomial(q_eval_matrix, wPsi, k, X_vars)
     q_residual = apolar_norm(p - p_dec)
 
@@ -111,7 +111,7 @@ function qsym_decompose(p, q::AbstractVector, k::Int; Z_vars = unique(reduce(vca
         :weights => wPsi,
         :points => XiPsi,
         :qSympoints => q_eval_matrix,
-        :psi_polynomial => poly_x,
+        :psi_polynomial => poly_z,
         :p_decomposition => p_dec,
         :residual => q_residual
     )
