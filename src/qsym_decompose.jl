@@ -53,7 +53,7 @@ function qsym_decompose(p, q::AbstractVector, k::Int; Z_vars = unique(reduce(vca
     ############################################################
     println("Trying q-Symmetric decomposition...")
 
-    h = maximum(degree.(q))
+    h = maximum(maxdegree.(q))
     M, Bdom, Bcod = Wq_matrix(X_vars, Z_vars, k, h, q) # Bdom and Bcod are the bases of the domain and codomain respectively
 
     hk = Int(maxdegree(Bcod[1]))
