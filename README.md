@@ -1,6 +1,6 @@
-# QSymDecomposition
+# QSymDecomposition.jl
 
-The package QSymDecomposition provides tools to perform $q$-Symmetric decompositions of symmetric tensors.
+The package QSymDecomposition.jl provides tools to perform $q$-Symmetric decompositions of symmetric tensors.
 
 ## Installation
 
