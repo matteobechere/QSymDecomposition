@@ -1,6 +1,7 @@
 # QSymDecomposition.jl
 
-The package QSymDecomposition.jl provides tools to perform $q$-Symmetric decompositions of symmetric tensors.
+The package QSymDecomposition.jl provides tools to perform $q$-Symmetric decompositions of symmetric tensors. The function `qsym_decompose` implements Algorithm 1 from [Symmetric tensor decomposition on rational varieties](https://arxiv.org/abs/2606.25712) to Julia.
+The `tests` folder of this repository contains Julia codes to reproduce the results in [Section 4. Effective decompositions of q-Symmetric tensors](https://arxiv.org/abs/2606.25712).
 
 ## Installation
 
